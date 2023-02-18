@@ -11,16 +11,14 @@ const createArtist = async (req, res) => {
   }
 }
 
-/*const createArtist =  async (req, res) => {
-    const { name, genre } = req.body
-
+const readArtist = async (_, res) => {
     try {
-        const { rows: [ artist ] } =  await db.query(`INSERT INTO Artists (name, genre ) VALUES ('${name}', ${genre}') RETURNING *`)
-        res.status(201).json(artist)
-    }   catch (err) {
+        const { rows } = await db.query('SELECT * FROM Artists')
+        res.status(200).json(rows)
+
+    } catch (err) {
         res.status(500).json(err.message)
     }
-}*/
+}
 
-
-module.exports = { createArtist }
+module.exports = { createArtist, readArtist }
