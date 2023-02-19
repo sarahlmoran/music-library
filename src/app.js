@@ -5,11 +5,10 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/artists', artistRouter)
+app.use('/artists', artistRouter);
 
-app.get('/', (req,res) => {
-    res.status(200).json('Hello World');
-})
-
+app.get('/', (req, res) => {
+  res.status(200).json('Hello World');
+});
 
 module.exports = app;
