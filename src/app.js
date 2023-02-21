@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use('/artists', artistRouter);
 
-app.use('/artists/:id/albums', albumRouter);
+app.use('/artists', albumRouter);
 
 app.get('/', (req, res) => {
   res.status(200).json('Hello World');
