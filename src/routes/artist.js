@@ -1,13 +1,5 @@
 const express = require('express');
 const artistController = require('../controllers/artist');
-const {
-  createArtist,
-  readArtist,
-  getArtistByID,
-  updateArtist,
-  updateArtistPatch,
-  deleteArtist,
-} = require('../controllers/artist');
 
 const router = express.Router();
 
