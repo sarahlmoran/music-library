@@ -60,8 +60,6 @@ const updateArtist = async (req, res) => {
     }
 
     res.status(200).json(artist);
-    console.log(artist);
-    console.log('xxxxxxxxxxx');
   } catch (err) {
     res.status(500).json(err.message);
   }
@@ -94,8 +92,6 @@ const updateArtistPatch = async (req, res) => {
     }
 
     res.status(200).json(artist);
-    console.log(artist);
-    console.log('xxxxxxxxx');
   } catch (err) {
     res.status(500).json(err.message);
   }
