@@ -10,7 +10,7 @@ app.use('/artists', artistRouter);
 
 app.use('/artists', albumRouter);
 
-app.use('/albums', albumRouter)
+app.use('/albums', albumRouter);
 
 app.get('/', (req, res) => {
   res.status(200).json('Hello World');
