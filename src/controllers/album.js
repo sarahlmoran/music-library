@@ -101,7 +101,6 @@ const deleteAlbum = async (req, res) => {
     }
 
     res.status(200).json(album);
-    console.log(album);
   } catch (err) {
     res.status(500).json(err.message);
   }
