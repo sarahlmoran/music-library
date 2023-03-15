@@ -4,9 +4,13 @@ const artistRouter = require('./routes/artist');
 const albumRouter = require('./routes/album');
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const morgan = require("morgan");
+const helmet = require("helmet");
 
 const app = express();
 
+app.use(helmet());
+app.use(morgan("tiny"));
 app.use(express.json());
 
 const options = {

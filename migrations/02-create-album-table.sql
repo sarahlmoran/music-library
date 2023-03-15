@@ -1,10 +1,7 @@
+
 CREATE TABLE Albums (
-    id SERIAL,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     year INT NOT NULL,
-    artistId SERIAL,
-	PRIMARY KEY(id),
-	CONSTRAINT fk_artist
-		FOREIGN KEY(artistId) 
-			REFERENCES Artists(id)
-)
+    artistId INT NOT NULL REFERENCES Artists(id) ON DELETE CASCADE
+);
