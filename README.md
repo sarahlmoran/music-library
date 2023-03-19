@@ -5,8 +5,11 @@ A project as part of my boot camp with Command Shift (formerly Manchester Codes)
 ## Concepts
 
 -Database design
+
 -SQL
+
 -Postgres
+
 -CRUD Operations
 
 ## Author
