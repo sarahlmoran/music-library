@@ -1,30 +1,79 @@
-Project Title: Music library
+# Music Library
 
-Installation:
+A project as part of my boot camp with Command Shift (formerly Manchester Codes). This project is an app for managing a music library by designing and implementing an API which can perform crud operations on a database.
 
-Create a new directory of the project. You can call it whatever you like, something along the lines of music-library would work.
+## Concepts
 
-Initialize a git repo with git init.
+Database design
+SQL
+Postgres
+CRUD Operations
 
-Add a README.md file in the root of your music-library folder. Use this file to document your project.
+## [sarahlmoran] (https://github.com/sarahlmoran)
 
-Create a remote repository for the project on Github.
+## Installation 
 
-Connect your remote and local repositories. There will be instructions on how to do this on Github.
+1. Install docker
 
-Initialize a node project in your folder with npm init -y. This will create a default package.json.
+2. In your terminal: 
 
-Create a .gitignore file. You can do this automatically with npx gitignore node, npx is similar to npm, but is used to run scripts without having to store them on your computer. This will create a new file filled with common .gitignore entries.
+   ```cli
+   docker run --name postgres -p <pgPortNumber>:<pgPortNumber> -e POSTGRES_PASSWORD=<yourPassword> -d postgres
+   ```
 
-Set up eslint in this project with npx eslint --init. Answer the question to configure it for common js that runs in node.
 
-We are also going to use Prettier to format our code. Install the Prettier VS Code extension for javascript, and create a new file called .prettierrc.json. This should contain:
+3. Clone repo then move into the local repo and install the app dependencies:
 
-{
-"trailingComma": "es5",
-"tabWidth": 2,
-"semi": true,
-"singleQuote": true
-}
-You can format all the files in your project with the command npx prettier . --write
-Its best to do this just before committing code to github.
+   ```
+   git clone https://github.com/sarahlmoran/music-library
+   cd /path/to/repo
+   npm install
+   ```
+
+4. Create .env and .env.test files to load the environment variables. Please note that the variable for PGDATABASE will need to be different in the .env and .env.test to avoid conflicts
+
+   ```
+   PGUSER=<user>
+   PGHOST=localhost
+   PGPASSWORD=<yourPassword>
+   PGDATABASE=<nameOfDatabase>
+   PGPORT=<pgPortNumber>
+   PORT=<port>
+   ```
+
+5. Finally start the API using:
+
+   ```
+   npm start 
+
+## Application dependencies
+
+```
+ "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.9.0",
+    "postgres-migrations": "^5.3.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2"
+  }
+```
+
+## Developer dependencies
+
+```
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.34.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  }
+```
+
+## Check it out
+
+Check out this API on: [https://music-library-database-nqmo.onrender.com/swagger/]
