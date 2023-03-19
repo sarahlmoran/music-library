@@ -4,13 +4,13 @@ A project as part of my boot camp with Command Shift (formerly Manchester Codes)
 
 ## Concepts
 
-Database design
-SQL
-Postgres
-CRUD Operations
+-Database design
+-SQL
+-Postgres
+-CRUD Operations
 
 ## Author
-Sarah Moran https://github.com/sarahlmoran
+Sarah Moran: https://github.com/sarahlmoran
 
 ## Installation 
 
