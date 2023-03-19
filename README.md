@@ -9,7 +9,8 @@ SQL
 Postgres
 CRUD Operations
 
-## [sarahlmoran] (https://github.com/sarahlmoran)
+## Author
+Sarah Moran https://github.com/sarahlmoran
 
 ## Installation 
 
@@ -76,4 +77,4 @@ CRUD Operations
 
 ## Check it out
 
-Check out this API on: [https://music-library-database-nqmo.onrender.com/swagger/]
+Check out this API on: https://music-library-database-nqmo.onrender.com/swagger/
