@@ -45,7 +45,7 @@ Sarah Moran: https://github.com/sarahlmoran
    PORT=<port>
    ```
 
-5. Finally start the API using:
+5. Start the API using:
 
    ```
    npm start 
