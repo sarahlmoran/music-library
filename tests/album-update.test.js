@@ -7,6 +7,7 @@ describe('Update album', () => {
   let artists;
   let albums;
   let album;
+
   beforeEach(async () => {
     let responses;
     responses = await Promise.all([
@@ -49,6 +50,7 @@ describe('Update album', () => {
           year: 2012,
           artistid: album.artistid,
         });
+
       expect(status).to.equal(200);
 
       expect(body).to.deep.equal({
@@ -67,6 +69,7 @@ describe('Update album', () => {
           year: 2012,
           artistid: album.artistsid,
         });
+        
       expect(status).to.equal(404);
       expect(body.message).to.equal('album 999999999 does not exist');
     });

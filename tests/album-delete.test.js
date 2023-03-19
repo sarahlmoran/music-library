@@ -7,6 +7,7 @@ describe('Delete album', () => {
   let artists;
   let albums;
   let album;
+
   beforeEach(async () => {
     let responses;
     responses = await Promise.all([
@@ -45,6 +46,7 @@ describe('Delete album', () => {
       const { status, body } = await request(app)
         .delete(`/albums/${album.id}`)
         .send();
+
       expect(status).to.equal(200);
       expect(body).to.deep.equal({
         id: album.id,
@@ -58,6 +60,7 @@ describe('Delete album', () => {
       const { status, body } = await request(app)
         .delete('/albums/999999999')
         .send();
+        
       expect(status).to.equal(404);
       expect(body.message).to.equal('album 999999999 does not exist');
     });

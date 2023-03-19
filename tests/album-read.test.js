@@ -6,6 +6,7 @@ const app = require('../src/app');
 describe('Read album', () => {
   let artists;
   let albums;
+  
   beforeEach(async () => {
     let responses;
     responses = await Promise.all([
@@ -55,6 +56,7 @@ describe('Read album', () => {
       const { status, body } = await request(app)
         .get(`/albums/${albums[0].id}`)
         .send();
+
       expect(status).to.equal(200);
       expect(body).to.deep.equal(albums[0]);
     });
@@ -63,6 +65,7 @@ describe('Read album', () => {
       const { status, body } = await request(app)
         .get('/albums/999999999')
         .send();
+
       expect(status).to.equal(404);
       expect(body.message).to.equal('album 999999999 does not exist');
     });

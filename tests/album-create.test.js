@@ -30,6 +30,7 @@ describe('create album', () => {
         const {
           rows: [albumData],
         } = await db.query(`SELECT * FROM Albums WHERE id = ${body.id}`);
+        
         expect(albumData.name).to.equal('Channel Orange');
         expect(albumData.year).to.equal(2012);
       });

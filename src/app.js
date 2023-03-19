@@ -26,11 +26,8 @@ const options = {
 const swaggerSpecs = swaggerJsdoc(options);
 
 app.use('/artists', artistRouter);
-
 app.use('/artists', albumRouter);
-
 app.use('/albums', albumRouter);
-
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 app.get('/', (req, res) => {

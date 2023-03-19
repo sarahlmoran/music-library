@@ -30,7 +30,6 @@ describe('Read Artists', () => {
 
       expect(status).to.equal(200);
       expect(body.length).to.equal(3);
-
       body.forEach((artistRecord) => {
         const expected = artists.find((a) => a.id === artistRecord.id);
 
@@ -38,6 +37,7 @@ describe('Read Artists', () => {
       });
     });
   });
+  
   describe('GET /artists/{id}', () => {
     it('returns the artist with the correct id', async () => {
       const { status, body } = await request(app)

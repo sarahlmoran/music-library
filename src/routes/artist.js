@@ -108,6 +108,7 @@ router.get('/:id', artistController.getArtistByID);
  */
 
 router.put('/:id', artistController.updateArtist);
+
 /**
  * @swagger
  * /artists/{id}:
@@ -143,6 +144,7 @@ router.put('/:id', artistController.updateArtist);
  *          404:
  *              description: The artist could not be found
  */
+
 router.patch('/:id', artistController.updateArtistPatch);
 
 /**
